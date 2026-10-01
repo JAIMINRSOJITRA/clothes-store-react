@@ -27,6 +27,22 @@ npm install
 npm run dev
 ```
 
+Build for production with `npm run build`, preview the build with `npm run preview`.
+
+## Project Structure
+
+```
+project/
+├── src/
+│   ├── App.tsx              # Main app shell — hero, product grid, cart state
+│   ├── components/
+│   │   ├── Navbar.tsx
+│   │   ├── ProductCard.tsx
+│   │   ├── ProductModal.tsx
+│   │   └── CartModal.tsx
+│   └── data/products.ts     # Local product catalog
+```
+
 ## Notes
 
 Product data is currently defined locally in `src/data/products.ts` — there is no backend or database wired up.
