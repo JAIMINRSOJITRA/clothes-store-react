@@ -13,6 +13,24 @@ A front-end storefront showing a product catalog, detail modals, and a working c
 * Responsive navbar and hero section
 * Smooth animations with Framer Motion
 
+## 🔄 Workflow
+
+How a customer uses the storefront.
+
+```mermaid
+flowchart TD
+    A(["Customer opens the store"]) --> B["Product grid loads from data/products.ts"]
+    B --> C["Customer clicks a product"]
+    C --> D["Product detail modal opens"]
+    D --> E["Add to cart"]
+    E --> F["Cart state updates in App.tsx"]
+    F --> G["Customer opens the cart"]
+    G --> H{"Change the cart?"}
+    H -->|"Yes"| I["Change quantity or remove an item"]
+    I --> G
+    H -->|"No"| J(["Review the order total"])
+```
+
 ## 🛠️ Tech Stack
 
 * Language: TypeScript
